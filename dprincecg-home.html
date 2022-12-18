@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>DprinceCG | Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- This is where style went -->
+<link rel="stylesheet" href="dprincecg-style.css">
+</head>
+
+<body>
+
+<div class="header">
+  <!-- h1 is most important header for SEO + Stylesheet -->
+  <h1>Derwin Prince Jr.</h1> 
+  <p>CG Generalist</p>
+</div>
+
+<div class="navbar">
+  <a href="dprincecg-home.html">Home</a>
+  <a href="dprincecg-about.html">About</a>
+  <a href="dprincecg-work.html">Work</a>
+  <a href="dprincecg-about.html#section1">Contact</a>
+  <!-- <a href="#" class="right">Temp</a> -->
+</div>
+
+<div class="main_page_content">
+
+	<div class="center_area">
+
+	<!-- <h2>Automatic Slideshow</h2>
+	<p>Change image every 2 seconds:</p> -->
+
+		<div class="slideshow-container">
+
+			<div class="mySlides fade">
+			<img src="images/fx_sample_1.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides fade">
+			<img src="images/final_image12_new.png" style="width:100%">
+			</div>
+
+<!-- 			<div class="mySlides fade">
+			<img src="images/final_img_27.png" style="width:100%">
+			</div> -->
+
+			<div class="mySlides fade">
+			<img src="images/zNEW02.png" style="width:100%">
+			</div>
+			
+			<div class="mySlides fade">
+			<img src="images/render_test_6_fin.jpg" style="width:100%">
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- some reason this is helping to drive the for loop counter -->
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <!-- <span class="dot"></span> -->
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3500); // Change image every 2 seconds
+}
+</script>	
+
+<!-- <video src="video/d2_render_site.mp4" width="640" height="360" autoplay loop>
+  Sorry, your browser doesn't support embedded videos.
+</video> -->
+</div>
+
+</div>
+
+
+<div class="footer">
+  <p>dprinceCG</p>
+</div>
+
+</body>
+</html>
