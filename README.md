@@ -1,2 +1,2 @@
 # base-site
-A basic portfolio website 
+A basic portfolio website.
